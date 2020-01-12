@@ -20,12 +20,12 @@ These are potential actions that users of the website would want to perform.
 
 ### Wireframes
 
-![Desktop Homepage](assets/wireframes/simon-picture.jpg "Desktop Homepage")
+![Desktop Homepage](assets/wireframes/home-desktop.jpg "Desktop Homepage")
 
-![Tablet Homepage](assets/wireframes/simon-picture-tablet.jpg "Tablet Homepage")
+![Tablet Homepage](assets/wireframes/home-tablet.jpg "Tablet Homepage")
 
-![Mobile Homepage](assets/wireframes/simon-picture-mobile.jpg "Mobile Homepage")
+![Mobile Homepage](assets/wireframes/home-mobile.jpg "Mobile Homepage")
 
-![Desktop Search Results](assets/wireframes/simon-picture.jpg "Desktop Search Results")
+![Desktop Search Results](assets/wireframes/search-desktop.jpg "Desktop Search Results")
 
-![Mobile Search Results](assets/wireframes/simon-picture-mobile.jpg "Mobile Search Results")
+![Mobile Search Results](assets/wireframes/search-mobile.jpg "Mobile Search Results")
