@@ -11,7 +11,7 @@
 
 <body>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Book Stop</a>
+    <a class="navbar-brand" href="{{ url_for('index') }}">Book Stop</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -30,8 +30,8 @@
       </div>
       </form>
       <div class="d-flex justify-content-around">
-        <button class="btn btn-warning  mx-sm-1">All Books</button>
-      <button class="btn btn-warning mx-sm-1">Add Book</button>
+        <a href="{{ url_for('all') }}"><button class="btn btn-warning  mx-sm-1">All Books</button></a>
+        <a href="#"><button class="btn btn-warning mx-sm-1">Add Book</button></a>
       </div>
     </div>
   </nav>
