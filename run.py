@@ -2,9 +2,17 @@ import os
 from flask import Flask, render_template
 from flask_pymongo import PyMongo
 
-MONGO_DATA = os.getenv("MONGO_URI")
 
 app = Flask(__name__)
+
+
+app.config["MONGO_DBNAME"] = 'books-project'
+app.config["MONGO_URI"] = os.getenv('MONGO_URI')
+
+mongo = PyMongo(app)
+
+for book in mongo.db.books.find():
+    print(book['title'])
 
 
 @app.route("/")
