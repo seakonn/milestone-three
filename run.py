@@ -1,5 +1,8 @@
 import os
 from flask import Flask, render_template
+from flask_pymongo import PyMongo
+
+MONGO_DATA = os.getenv("MONGO_URI")
 
 app = Flask(__name__)
 
