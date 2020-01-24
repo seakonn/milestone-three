@@ -11,9 +11,6 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI')
 
 mongo = PyMongo(app)
 
-for book in mongo.db.books.find():
-    print(book['title'])
-
 
 @app.route("/")
 def index():
@@ -21,7 +18,10 @@ def index():
     
 @app.route("/allbooks")
 def all():
-    return render_template("allbooks.html")
+    
+    all_books = mongo.db.books.find()
+    
+    return render_template("allbooks.html", all_books=all_books)
 
 
 if __name__ =="__main__":

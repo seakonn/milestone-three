@@ -1,4 +1,11 @@
 {% extends 'index.html' %}
+
 {% block content %}
-<h1>Potato</h1>
+
+<h1>ALL BOOKS</h1>
+
+{% for book in all_books %}
+    <h1>{{ book['title'] }}</h1>
+{% endfor %}
+
 {% endblock %}
