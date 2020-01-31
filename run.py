@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template
 from flask_pymongo import PyMongo
+from bson.objectid import ObjectId
 
 
 app = Flask(__name__)
@@ -24,10 +25,12 @@ def all():
     return render_template("allbooks.html", all_books=all_books)
     
 
-@app.route("/book")
-def book():
+@app.route("/book/<book_id>")
+def book(book_id):
     
-    return render_template("book.html")
+    my_book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+    
+    return render_template("book.html", book=my_book)
 
 
 if __name__ =="__main__":
