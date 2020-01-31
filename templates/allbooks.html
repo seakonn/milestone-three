@@ -17,7 +17,7 @@
         {% if book['image_url'] %}
         {% set source = book['image_url'] %}
         {% endif %}
-        <a href="#"><img class="card-img-top" src={{ source }} alt=""></a>
+        <a href= "{{ url_for("book", book_id=book['_id']) }}"><img class="card-img-top" src={{ source }} alt=""></a>
         <div class="card-body">
           <h4 class="card-title">
             <a href="#">{{ book['title'] }}</a>
