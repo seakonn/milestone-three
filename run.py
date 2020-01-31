@@ -22,6 +22,12 @@ def all():
     all_books = mongo.db.books.find()
     
     return render_template("allbooks.html", all_books=all_books)
+    
+
+@app.route("/book")
+def book():
+    
+    return render_template("book.html")
 
 
 if __name__ =="__main__":
