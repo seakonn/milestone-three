@@ -4,8 +4,8 @@
 <div class="container">
 <div class="card mb-3">
   {% set source = "/static/images/no-cover-image.png" %}
-  {% if book.image %}
-  {% set source = book.image %}
+  {% if book.image_url %}
+  {% set source = book.image_url %}
   {% endif %}
   <img src="{{ source }}" class="card-img-top" alt="Cover Image">
   <div class="card-body">
