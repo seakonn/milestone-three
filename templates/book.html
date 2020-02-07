@@ -25,6 +25,10 @@
     
     {% endfor %}
     
+    {% if not book.reviews %}
+    <p> No reviews yet! </p>
+    {% endif %}
+    
   
 </div>
 </div>
