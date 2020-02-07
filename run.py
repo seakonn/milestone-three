@@ -32,6 +32,11 @@ def book(book_id):
     
     return render_template("book.html", book=my_book)
 
+@app.route("/addreview")
+def add_review():
+    
+    return render_template("addreview.html")
+
 
 if __name__ =="__main__":
     app.run(host=os.getenv("IP"),
