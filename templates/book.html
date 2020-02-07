@@ -15,11 +15,15 @@
   </div>
     <h5 class="card-title"> Book Reviews </h5>
     
-    <!-- put loop here -->
+    
+    {% for review in book.reviews %}
+    
     <button>Delete Review</button>
     <button>Edit Review</button>
-    <h6 class="card-title"> {{ }} </h6>
-    <p class="card-text"> {{ }} </p>
+    <h6 class="card-title"> {{ review.username }} </h6>
+    <p class="card-text"> {{ review.review_text }} </p>
+    
+    {% endfor %}
     
   
 </div>
