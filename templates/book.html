@@ -3,10 +3,12 @@
 
 <div class="container">
 <div class="card mb-3">
+  
   {% set source = "/static/images/no-cover-image.png" %}
   {% if book.image_url %}
   {% set source = book.image_url %}
   {% endif %}
+  
   <img src="{{ source }}" class="card-img-top" alt="Cover Image">
   <div class="card-body">
     <h4 class="card-title">{{ book.title }}</h4>
@@ -14,7 +16,7 @@
     
   </div>
     <h5 class="card-title"> Book Reviews </h5>
-    
+    <button type="button" class="btn btn-success">Add Review</button>
     
     {% for review in book.reviews %}
     
