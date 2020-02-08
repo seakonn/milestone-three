@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -38,6 +38,15 @@ def add_review(book_id):
     current_book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     
     return render_template("addreview.html", current_book=current_book)
+    
+@app.route("/addreviewdata", methods=['POST'])
+def add_review_data():
+    
+    for stuff in request.form.to_dict():
+        print(stuff)
+        print(type(stuff))
+    
+    return render_template("index.html")
 
 
 if __name__ =="__main__":
