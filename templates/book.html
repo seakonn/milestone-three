@@ -16,7 +16,7 @@
     
   </div>
     <h5 class="card-title"> Book Reviews </h5>
-    <button type="button" class="btn btn-success">Add Review</button>
+    <a href="{{ url_for("add_review") }}"><button type="button" class="btn btn-success">Add Review</button></a>
     
     {% for review in book.reviews %}
     
