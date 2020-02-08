@@ -32,10 +32,12 @@ def book(book_id):
     
     return render_template("book.html", book=my_book)
 
-@app.route("/addreview")
-def add_review():
+@app.route("/addreview/<book_id>")
+def add_review(book_id):
     
-    return render_template("addreview.html")
+    current_book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+    
+    return render_template("addreview.html", current_book=current_book)
 
 
 if __name__ =="__main__":
