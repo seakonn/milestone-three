@@ -20,10 +20,11 @@
     
     {% for review in book.reviews %}
     
-    <button>Delete Review</button>
-    <button>Edit Review</button>
+    
     <h6 class="card-title"> {{ review.username }} </h6>
     <p class="card-text"> {{ review.review_text }} </p>
+    <a href="" role="button" class="btn btn-danger" title="Delete Review">Delete Review</a>
+    <a href="" role="button" class="btn btn-info" title="Edit Review">Edit Review</a>
     
     {% endfor %}
     
