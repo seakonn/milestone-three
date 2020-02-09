@@ -54,6 +54,11 @@ def delete_review(book_id, username, review_text):
     mongo.db.books.update_one({"_id": ObjectId(book_id)}, { "$pull": { "reviews": { "username": username, "review_text": review_text }}})
     
     return redirect(url_for("book", book_id=book_id))
+    
+@app.route("/editreview/<book_id>/<username>/<review_text>")
+def edit_review(book_id, username, review_text):
+    
+    return render_template("editreview.html", book_id=book_id, username=username, review_text=review_text)    
 
 
 if __name__ =="__main__":
