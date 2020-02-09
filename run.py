@@ -51,9 +51,7 @@ def add_review_data(book_id):
 @app.route("/deletereview/<book_id>/<username>/<review_text>")
 def delete_review(book_id, username, review_text):
     
-    print("Book ID:" + book_id)
-    print(username)
-    print(review_text)
+    mongo.db.books.update_one({"_id": ObjectId(book_id)}, { "$pull": { "reviews": { "username": username, "review_text": review_text }}})
     
     return redirect(url_for("book", book_id=book_id))
 
