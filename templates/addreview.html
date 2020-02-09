@@ -4,7 +4,7 @@
     <a href="{{ url_for("book", book_id=current_book._id)}}">Back to Book Page</a>
     
     <h3>Adding review for: {{ current_book.title }}</h3>
-    <form action="{{ url_for("add_review_data") }}" method="POST">
+    <form action="{{ url_for("add_review_data", book_id=current_book._id) }}" method="POST">
         <div class="form-group">
             <label>Username</label>
             <input name="username" type="text" class="form-control" placeholder="Enter a name" required>
