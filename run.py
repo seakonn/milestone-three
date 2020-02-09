@@ -39,12 +39,12 @@ def add_review(book_id):
     
     return render_template("addreview.html", current_book=current_book)
     
-@app.route("/addreviewdata", methods=['POST'])
-def add_review_data():
+@app.route("/addreviewdata/<book_id>", methods=['POST'])
+def add_review_data(book_id):
     
-    for stuff in request.form.to_dict():
-        print(stuff)
-        print(type(stuff))
+    form = request.form.to_dict()
+    
+    mongo.db.books.update_one({"_id": ObjectId(book_id)}, { "$push": { "reviews": { "username": form['username'], "review_text": form['review_text'] }}})
     
     return render_template("index.html")
 
