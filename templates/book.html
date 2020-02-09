@@ -24,7 +24,7 @@
     <h6 class="card-title"> {{ review.username }} </h6>
     <p class="card-text"> {{ review.review_text }} </p>
     <a href="{{ url_for("delete_review", book_id=book._id, username=review.username, review_text=review.review_text)}}" role="button" class="btn btn-danger" title="Delete Review">Delete Review</a>
-    <a href="#" role="button" class="btn btn-info" title="Edit Review">Edit Review</a>
+    <a href="{{ url_for("edit_review", book_id=book._id, username=review.username, review_text=review.review_text)}}" role="button" class="btn btn-info" title="Edit Review">Edit Review</a>
     
     {% endfor %}
     
