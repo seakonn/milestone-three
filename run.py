@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -46,7 +46,7 @@ def add_review_data(book_id):
     
     mongo.db.books.update_one({"_id": ObjectId(book_id)}, { "$push": { "reviews": { "username": form['username'], "review_text": form['review_text'] }}})
     
-    return render_template("index.html")
+    return redirect(url_for("book", book_id=book_id))
 
 
 if __name__ =="__main__":
