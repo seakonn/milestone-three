@@ -55,10 +55,12 @@ def delete_review(book_id, username, review_text):
     
     return redirect(url_for("book", book_id=book_id))
     
-@app.route("/editreview/<book_id>/<username>/<review_text>")
-def edit_review(book_id, username, review_text):
+@app.route("/editreview/<book_title>/<book_id>/<username>/<review_text>")
+def edit_review(book_title, book_id, username, review_text):
     
-    return render_template("editreview.html", book_id=book_id, username=username, review_text=review_text)    
+    
+    
+    return render_template("editreview.html", book_title=book_title, book_id=book_id, username=username, review_text=review_text)   
 
 
 if __name__ =="__main__":
