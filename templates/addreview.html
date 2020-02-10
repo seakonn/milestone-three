@@ -6,12 +6,12 @@
     <h3>Adding review for: {{ current_book.title }}</h3>
     <form action="{{ url_for("add_review_data", book_id=current_book._id) }}" method="POST">
         <div class="form-group">
-            <label>Username</label>
+            <label>Your Name</label>
             <input name="username" type="text" class="form-control" placeholder="Enter a name" required>
         </div>
 
         <div class="form-group">
-            <label>Review text</label>
+            <label>Your Review</label>
             <textarea name="review_text" class="form-control" placeholder="What did you think of the book?" rows="3" required></textarea>
         </div>
 
