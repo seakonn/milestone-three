@@ -18,10 +18,10 @@
 
     <div class="collapse navbar-collapse justify-content-sm-end" id="navbarTogglerDemo02">
 
-      <form class="form-inline my-2 my-lg-0 mx-sm-2">
+      <form action="{{  url_for("search_results", searchterm=searchterm) }}" class="form-inline my-2 my-lg-0 mx-sm-2">
       <div class="input-group">
         
-          <input class="form-control mr-0" type="search" placeholder="Search Books">
+          <input class="form-control mr-0" type="search" placeholder="Search Books" name="searchbox">
           <div class="input-group-append">
             <span class="input-group-text">Go</span>
           </div>
