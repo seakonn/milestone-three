@@ -75,6 +75,12 @@ def edit_review_data(book_id, username, review_text):
     
     return redirect(url_for("book", book_id=book_id))
 
+@app.route("/searchresults", methods=['POST'])
+def search_results():
+    
+    search_term = request.form.to_dict()
+    
+    return render_template("searchresults.html", search_term=search_term)
 
 if __name__ =="__main__":
     app.run(host=os.getenv("IP"),
