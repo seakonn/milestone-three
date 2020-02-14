@@ -62,8 +62,8 @@ def edit_review(book_title, book_id, username, review_text):
     
     return render_template("editreview.html", book_title=book_title, book_id=book_id, username=username, review_text=review_text)
     
-@app.route("/editreviewdata")    
-def edit_review_data():
+@app.route("/editreviewdata/<book_id>/<username>/<review_text>", methods=['POST'])    
+def edit_review_data(book_id, username, review_text):
     
     # remove the original review
     mongo.db.books.update_one({"_id": ObjectId(book_id)}, { "$pull": { "reviews": { "username": username, "review_text": review_text }}})
@@ -73,7 +73,7 @@ def edit_review_data():
     # add the edited review
     mongo.db.books.update_one({"_id": ObjectId(book_id)}, { "$push": { "reviews": { "username": form['username'], "review_text": form['review_text'] }}})
     
-    redirect(url_for("book", book_id=book_id))
+    return redirect(url_for("book", book_id=book_id))
 
 
 if __name__ =="__main__":
