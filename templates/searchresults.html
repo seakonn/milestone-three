@@ -8,6 +8,12 @@
   <h1 class="my-4">Search Results</h1>
   
   <p>You searched for: {{ search_term }}</p>
+  
+  {% for result in results %}
+  
+  <p>{{ result['title'] }} ":" {{ result['author'] }}</p>
+  
+  {% endfor %}
 
   <div class="row">
     
