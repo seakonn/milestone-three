@@ -80,6 +80,11 @@ def search_results():
     
     form_data = request.form.to_dict()
     
+    results = list(mongo.db.books.find({ "$or": [{"title": { "$regex": "Invisible"}},{ "author": { "$regex": "Jan"}}]}))
+    
+    for doc in results:
+        print(doc)
+        
     return render_template("searchresults.html", search_term=form_data['searchbox'])
 
 if __name__ =="__main__":
