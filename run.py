@@ -79,13 +79,11 @@ def edit_review_data(book_id, username, review_text):
 def search_results():
     
     form_data = request.form.to_dict()
+    search_term = form_data['searchbox']
     
-    results = list(mongo.db.books.find({ "$or": [{"title": { "$regex": "Invisible"}},{ "author": { "$regex": "Jan"}}]}))
+    results = list(mongo.db.books.find({ "$or": [{"title": { "$regex": search_term}},{ "author": { "$regex": search_term}}]}))
     
-    for doc in results:
-        print(doc)
-        
-    return render_template("searchresults.html", search_term=form_data['searchbox'])
+    return render_template("searchresults.html", search_term=search_term, results=results)
 
 if __name__ =="__main__":
     app.run(host=os.getenv("IP"),
