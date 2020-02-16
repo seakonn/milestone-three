@@ -81,7 +81,27 @@ def search_results():
     form_data = request.form.to_dict()
     search_term = form_data['searchbox']
     
-    results = list(mongo.db.books.find({ "$or": [{"title": { "$regex": search_term}},{ "author": { "$regex": search_term}}]}))
+    reg_exp = ""
+    
+    terms = search_term.split()
+    
+    """
+    want to create a regular expression that has all the search terms
+    and ignores the case of the characters.
+    """
+    for str in terms:
+        
+        str.lower()
+        
+        for letter in str:
+            
+            reg_exp += "[" + letter + letter.upper() + "]"
+        
+        reg_exp += "|"
+    
+    reg_exp = reg_exp.rstrip("|")
+    
+    results = list(mongo.db.books.find({ "$or": [{"title": { "$regex": reg_exp}},{ "author": { "$regex": reg_exp}}]}))
     
     return render_template("searchresults.html", search_term=search_term, results=results)
 
