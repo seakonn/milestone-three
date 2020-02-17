@@ -2,6 +2,7 @@ import os
 from flask import Flask, render_template, request, redirect, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+import string
 
 
 app = Flask(__name__)
@@ -87,7 +88,8 @@ def search_results():
     
     """
     want to create a regular expression that has all the search terms
-    and ignores the case of the characters.
+    and ignores the case of the characters. Punctuation and numbers 
+    are ignored from the search term.
     """
     for str in terms:
         
@@ -95,13 +97,13 @@ def search_results():
         
         for letter in str:
             
-            reg_exp += "[" + letter + letter.upper() + "]"
+            if letter in string.ascii_letters:
+                
+                reg_exp += "[" + letter + letter.upper() + "]"
         
         reg_exp += "|"
     
     reg_exp = reg_exp.rstrip("|")
-    
-    print(reg_exp)
     
     results = list(mongo.db.books.find({ "$or": [{"title": { "$regex": reg_exp}},{ "author": { "$regex": reg_exp}}]}))
     
