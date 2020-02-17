@@ -91,7 +91,7 @@ def search_results():
     """
     for str in terms:
         
-        str.lower()
+        str = str.lower()
         
         for letter in str:
             
@@ -100,6 +100,8 @@ def search_results():
         reg_exp += "|"
     
     reg_exp = reg_exp.rstrip("|")
+    
+    print(reg_exp)
     
     results = list(mongo.db.books.find({ "$or": [{"title": { "$regex": reg_exp}},{ "author": { "$regex": reg_exp}}]}))
     
