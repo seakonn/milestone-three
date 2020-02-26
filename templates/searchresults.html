@@ -9,17 +9,9 @@
   
   <p>You searched for: {{ search_term }}</p>
   
-  {% for result in results %}
-  
-  <p>{{ result['title'] }} ":" {{ result['author'] }}</p>
-  
-  {% endfor %}
-
   <div class="row">
-    
-    <!--
      
-    {% for book in all_books %}  
+    {% for book in results %}  
     
     <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
       <div class="card h-100">
@@ -39,12 +31,6 @@
   
   {% endfor %}
   
-  -->
-  
   </div>
-  <!-- /.row -->
-
-
-</div>
 
 {% endblock %}
