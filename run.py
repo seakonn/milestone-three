@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import string
+import random
 
 
 app = Flask(__name__)
@@ -16,7 +17,12 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    
+    books = list(mongo.db.books.find())
+    
+    random_book = random.choice(books)
+    
+    return render_template("index.html", random_book=random_book)
     
 @app.route("/allbooks")
 def all():
