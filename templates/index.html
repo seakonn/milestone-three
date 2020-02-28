@@ -1,14 +1,21 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <div class="container">
-<div class="jumbotron">
-  <h1 class="display-4">Hello, world!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-</div>
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to Book Stop</h1>
+    <h1>Random Book:</h1>
+    <div class="card mb-3">
+
+      {% set source = "/static/images/no-cover-image.png" %} {% if random_book.image_url %} {% set source = random_book.image_url %} {% endif %}
+
+      <img src="{{ source }}" class="card-img-top" alt="Cover Image">
+      <div class="card-body">
+        <h4 class="card-title">{{ random_book.title }}</h4>
+        <p class="card-text"> {{ random_book.author }}</p>
+
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock %}
