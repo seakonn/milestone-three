@@ -7,7 +7,11 @@
   <!-- Page Heading -->
   <h1 class="my-4">Search Results</h1>
   
-  <p>You searched for: {{ search_term }}</p>
+  <p>You searched for: "{{ search_term }}"</p>
+  
+  {% if not results %}
+  <p>No results found!</p>
+  {% endif %} 
   
   <div class="row">
      
