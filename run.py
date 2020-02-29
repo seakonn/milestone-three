@@ -100,18 +100,29 @@ def search_results():
     for str in terms:
         
         str = str.lower()
+        reg = ""
         
         for letter in str:
             
             if letter in string.ascii_letters:
                 
-                reg_exp += "[" + letter + letter.upper() + "]"
+                reg += "[" + letter + letter.upper() + "]"
+                
         
-        reg_exp += "|"
+        print("Reg = " +reg +"length: ")
+        print(len(reg))
+        
+        if not reg_exp and reg:
+            reg_exp += reg
+        elif reg:
+            reg_exp += "|" + reg
+            
+    print("Reg exp is: " +reg_exp)
     
-    reg_exp = reg_exp.rstrip("|")
-    
-    results = list(mongo.db.books.find({ "$or": [{"title": { "$regex": reg_exp}},{ "author": { "$regex": reg_exp}}]}))
+    if reg_exp:
+        results = list(mongo.db.books.find({ "$or": [{"title": { "$regex": reg_exp}},{ "author": { "$regex": reg_exp}}]}))
+    else:
+        results = []
     
     return render_template("searchresults.html", search_term=search_term, results=results)
 
