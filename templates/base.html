@@ -15,7 +15,7 @@
 
 <body>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a id="main-title" class="navbar-brand" href="{{ url_for('index') }}">Book Stop<i class="fas fa-book-open"></i></a>
+    <a id="main-title" class="navbar-brand roboto-slab-font" href="{{ url_for('index') }}">Book Stop<i class="fas fa-book-open"></i></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -25,16 +25,16 @@
       <form action="{{  url_for("search_results") }}" class="form-inline my-2 my-lg-0 mx-sm-2" method="POST">
       <div class="input-group">
         
-          <input class="form-control mr-0" type="search" placeholder="Search Books" name="searchbox" required>
+          <input class="form-control mr-0 roboto-slab-font" type="search" placeholder="Search Books" name="searchbox" required>
           <div class="input-group-append">
-            <button type="submit" class="btn input-group-text">Go</button>
+            <button type="submit" class="btn input-group-text roboto-slab-font">Go</button>
           </div>
         
 
       </div>
       </form>
       <div class="d-flex justify-content-around">
-        <a href="{{ url_for('all') }}"><button class="btn btn-warning  mx-sm-1">All Books</button></a>
+        <a href="{{ url_for('all') }}"><button class="btn btn-warning  mx-sm-1 roboto-slab-font">All Books</button></a>
         
       </div>
     </div>
