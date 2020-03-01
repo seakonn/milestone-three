@@ -44,3 +44,8 @@ body {
 .card > a {
     max-width: 60%;
 }
+
+.card {
+    
+    align-items: center;
+}
