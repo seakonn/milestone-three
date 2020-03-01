@@ -3,6 +3,10 @@
     font-family: "Roboto Slab", cursive;
 }
 
+i {
+    margin-left: 0.5rem;
+}
+
 body {
     font-family: "Caladea", sans-serif;
 }
