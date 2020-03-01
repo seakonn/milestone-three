@@ -7,6 +7,17 @@
     font-family: "Roboto Slab", cursive;
 }
 
+/* some bootstrap classes use !important so need to use it here to override the colours */
+.cafe-noir-bg {
+    
+    background-color: #513b1f !important;
+}
+
+.footer {
+    
+    min-height: 5rem;
+}
+
 i {
     margin-left: 0.5rem;
 }
