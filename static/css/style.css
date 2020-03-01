@@ -40,3 +40,7 @@ i {
 body {
     font-family: "Caladea", sans-serif;
 }
+
+.card > a {
+    max-width: 60%;
+}
