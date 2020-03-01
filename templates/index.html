@@ -8,9 +8,9 @@
 
       {% set source = "/static/images/no-cover-image.png" %} {% if random_book.image_url %} {% set source = random_book.image_url %} {% endif %}
 
-      <img src="{{ source }}" class="card-img-top" alt="Cover Image">
+      <a href= "{{ url_for("book", book_id=random_book['_id']) }}"><img src="{{ source }}" class="card-img-top" alt="Cover Image"></a>
       <div class="card-body">
-        <h4 class="card-title">{{ random_book.title }}</h4>
+        <a href= "{{ url_for("book", book_id=random_book['_id']) }}"><h4 class="card-title">{{ random_book.title }}</h4></a>
         <p class="card-text"> {{ random_book.author }}</p>
 
       </div>
