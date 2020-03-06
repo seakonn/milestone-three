@@ -3,7 +3,7 @@
 <div class="container">
   <div class="jumbotron">
     <h1 id="welcome" class="text-center">Welcome to Book Stop</h1>
-    <h3 class="text-center">Have you read ... ?</h3>
+    <h3 id ="welcome-sub" class="text-center">Have you read ... ?</h3>
     <div class="card mb-3">
 
       {% set source = "/static/images/no-cover-image.png" %} {% if random_book.image_url %} {% set source = random_book.image_url %} {% endif %}

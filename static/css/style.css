@@ -49,15 +49,22 @@ body {
 .card {
     
     align-items: center;
+    background-color: #c8d96f;
 }
 
 .jumbotron {
     
     margin-top: 1rem;
+    background-color: #c8d96f;
 }
 
 #welcome {
     
     margin-bottom: 2rem;
+    color: #513b1f;
 }
 
+#welcome-sub {
+    
+    color: #513b1f;
+}
