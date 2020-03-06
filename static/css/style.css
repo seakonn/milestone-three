@@ -42,6 +42,7 @@ body {
 }
 
 .card > a {
+    
     max-width: 60%;
     margin-top: 1rem;
 }
@@ -50,6 +51,7 @@ body {
     
     align-items: center;
     background-color: #c8d96f;
+    border: 0.3rem solid #513b1f;
 }
 
 .jumbotron {
@@ -61,7 +63,7 @@ body {
 
 #welcome {
     
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     color: #513b1f;
     font-weight: bolder;
 }
@@ -72,7 +74,7 @@ body {
     font-size: 1.5rem
 }
 
-.card-body > a {
+.card-title {
     
     color: #513b1f;
 }
@@ -85,4 +87,14 @@ body {
 #index-card {
     
     border-color: transparent;
+}
+
+.card-title > a {
+    
+    color: #513b1f;
+}
+
+#all-books {
+    
+    color: #513b1f;
 }
