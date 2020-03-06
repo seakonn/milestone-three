@@ -56,15 +56,33 @@ body {
     
     margin-top: 1rem;
     background-color: #c8d96f;
+    border: 0.3rem solid #513b1f;
 }
 
 #welcome {
     
     margin-bottom: 2rem;
     color: #513b1f;
+    font-weight: bolder;
 }
 
 #welcome-sub {
     
     color: #513b1f;
+    font-size: 1.5rem
+}
+
+.card-body > a {
+    
+    color: #513b1f;
+}
+
+.card-text {
+    
+    color: #5c573e;
+}
+
+#index-card {
+    
+    border-color: transparent;
 }
