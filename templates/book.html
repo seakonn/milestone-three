@@ -16,9 +16,11 @@
   
   </div>
   
-  
-    <h5 id="review-title" class="card-title"> Book Reviews </h5>
-    <a href="{{ url_for("add_review", book_id=book._id) }}"><button type="button" class="btn btn-success">Add Review</button></a>
+    <div id="review-title-group">
+        <h5 id="review-title" class="card-title"> Book Reviews </h5>
+        <a href="{{ url_for("add_review", book_id=book._id) }}"><button type="button" class="btn btn-success">Add Review</button></a>
+    </div>
+    
     
     {% for review in book.reviews %}
     

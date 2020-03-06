@@ -98,3 +98,28 @@ body {
     
     color: #513b1f;
 }
+
+#book-card {
+    
+    margin-top: 1rem;
+}
+
+#book-img {
+    
+    max-width: 80%;
+    margin-top: 1rem;
+}
+
+#review-title {
+    
+    text-align: left;
+}
+
+#review-title-group {
+    
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
