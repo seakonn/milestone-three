@@ -51,7 +51,7 @@ body {
     
     align-items: center;
     background-color: #c8d96f;
-    border: 0.3rem solid #513b1f;
+    border: 0.2rem solid #513b1f;
 }
 
 .jumbotron {
@@ -77,11 +77,12 @@ body {
 .card-title {
     
     color: #513b1f;
+    font-weight: bold;
 }
 
 .card-text {
     
-    color: #5c573e;
+    color: #513b1f;
 }
 
 #index-card {
@@ -122,4 +123,12 @@ body {
     display: flex;
     justify-content: space-around;
     
+}
+
+.review-block {
+    
+    margin: 1rem 0;
+    background-color: #a5b452;
+    padding: 0.5rem;
+    border: 0.1rem solid #5c573e;
 }
