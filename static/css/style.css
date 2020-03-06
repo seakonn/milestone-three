@@ -43,9 +43,16 @@ body {
 
 .card > a {
     max-width: 60%;
+    margin-top: 1rem;
 }
 
 .card {
     
     align-items: center;
 }
+
+.jumbotron {
+    
+    margin-top: 1rem;
+}
+
