@@ -28,8 +28,10 @@
     <div class="review-block">
         <h6 class="card-title"> {{ review.username }} </h6>
         <p class="card-text"> {{ review.review_text }} </p>
-        <a id="delete-review-button" href="{{ url_for("delete_review", book_id=book._id, username=review.username, review_text=review.review_text)}}" role="button" class="btn" title="Delete Review">Delete</a>
-        <a id="edit-review-button" href="{{ url_for("edit_review", book_title=book.title, book_id=book._id, username=review.username, review_text=review.review_text) }}" role="button" class="btn" title="Edit Review">Edit</a>
+        <div class="two-buttons">
+            <a id="delete-review-button" href="{{ url_for("delete_review", book_id=book._id, username=review.username, review_text=review.review_text)}}" role="button" class="btn" title="Delete Review">Delete</a>
+            <a id="edit-review-button" href="{{ url_for("edit_review", book_title=book.title, book_id=book._id, username=review.username, review_text=review.review_text) }}" role="button" class="btn" title="Edit Review">Edit</a>
+        </div>
     </div>
     
     {% endfor %}

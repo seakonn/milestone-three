@@ -149,6 +149,7 @@ body {
     background-color: #5c573e;
     border: 1px solid #ffffff;
     color: #ffffff;
+    margin: 0 0.2rem;
 }
 
 #edit-review-button {
@@ -156,10 +157,17 @@ body {
     background-color: #a5b452;
     border: 1px solid #5c573e;
     color: #ffffff;
+    margin: 0 0.2rem;
 }
 
 #no-reviews {
     
     margin: 2rem 0;
     font-size: 1.5rem;
+}
+
+.two-buttons {
+    
+    display:flex;
+    justify-content: flex-end;
 }
