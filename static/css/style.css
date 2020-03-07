@@ -196,3 +196,12 @@ body {
     display: flex;
     justify-content: center;
 }
+
+.back-to-book {
+    
+    text-decoration: underline;
+    color: #a5b452;
+    font-weight: bolder;
+    margin: 1rem 0;
+    display: block;
+}
