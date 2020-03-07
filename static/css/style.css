@@ -2,6 +2,13 @@
     font-size: 1.5rem;
 }
 
+.container {
+    
+    /* this is a fix for the footer being positioned absolutely,
+        so that it sits on top of the container */
+    padding-bottom: 5rem;
+}
+
 .roboto-slab-font {
     
     font-family: "Roboto Slab", cursive;
@@ -31,6 +38,9 @@
 .footer {
     
     min-height: 5rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 i {
@@ -39,6 +49,8 @@ i {
 
 body {
     font-family: "Caladea", sans-serif;
+    min-height: 100vh;
+    position: relative;
 }
 
 .card > a {
