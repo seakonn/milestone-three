@@ -132,3 +132,14 @@ body {
     padding: 0.5rem;
     border: 0.1rem solid #5c573e;
 }
+
+#add-review-button {
+    
+    background-color: #5c573e;
+    color: #ffffff;
+}
+
+#add-review-button:hover {
+    
+    border: 1px solid #a5b452;
+}
