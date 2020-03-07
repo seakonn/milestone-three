@@ -157,3 +157,9 @@ body {
     border: 1px solid #5c573e;
     color: #ffffff;
 }
+
+#no-reviews {
+    
+    margin: 2rem 0;
+    font-size: 1.5rem;
+}
