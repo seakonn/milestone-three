@@ -7,6 +7,7 @@
     /* this is a fix for the footer being positioned absolutely,
         so that it sits on top of the container */
     padding-bottom: 5rem;
+    text-align: center;
 }
 
 .roboto-slab-font {
@@ -71,6 +72,7 @@ body {
     margin-top: 1rem;
     background-color: #c8d96f;
     border: 0.3rem solid #513b1f;
+    display: inline-block;
 }
 
 #welcome {
