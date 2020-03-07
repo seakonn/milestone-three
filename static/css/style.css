@@ -183,3 +183,16 @@ body {
     background-color: #c8d96f;
     border: 1px solid #513b1f;
 }
+
+.brown-button {
+    
+    background-color: #513b1f;
+    color: #ffffff;
+    margin: 1rem 0;
+}
+
+.centre-button {
+    
+    display: flex;
+    justify-content: center;
+}
