@@ -33,3 +33,19 @@ These are potential actions that users of the website would want to perform.
 ![Desktop Search Results](assets/wireframes/search-desktop.jpg "Desktop Search Results")
 
 ![Mobile Search Results](assets/wireframes/search-mobile.jpg "Mobile Search Results")
+
+
+## Deployment
+
+Application was deployed to Heroku. The steps for this are as follows:
+
+1. After logging into my Heroku account, I clicked 'New' and then 'Create New App'
+2. I have to give my new app a name and pick my region as Europe.
+3. I had to link my GitHub repository, containing all my code, to Heroku so I clicked the 'Deploy' tab.
+4. I enter the details of my account and repository to link the two.
+5. I then have to enable automatic deploys, so when I push to GitHub, it deploys my code to Heroku; so I click on that.
+6. I had to enable environment variables for my project, so I click on 'Settings' > 'Reveal Config Vars' and enter in the ones my project uses.
+7. I have to generate a Procfile for my project, which I did by typing "echo web: python run.py > Procfile" into the terminal.
+8. I had to generate a requirements file as well, which I did by typing "sudo pip3 freeze --local > requirements.txt" into the terminal.
+9. I had to disable the debug environment before deployment, which I did by removing 'True' from the line in my run.py file, and replacing it with 'False'
+10. Once I have these changes added and committed using git, I had to push them to my git repository using 'git push' in the terminal. This also pushed the project to Heroku, where it began automatically installing dependencies and deploying the project.
