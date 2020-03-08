@@ -49,3 +49,23 @@ Application was deployed to Heroku. The steps for this are as follows:
 8. I had to generate a requirements file as well, which I did by typing "sudo pip3 freeze --local > requirements.txt" into the terminal.
 9. I had to disable the debug environment before deployment, which I did by removing 'True' from the line in my run.py file, and replacing it with 'False'
 10. Once I have these changes added and committed using git, I had to push them to my git repository using 'git push' in the terminal. This also pushed the project to Heroku, where it began automatically installing dependencies and deploying the project.
+
+
+## Credits
+
+### Content
+
+* Book icon on navbar courtesy of Font Awesome
+* Navbar font and general site font taken from Google Fonts
+
+### Media
+
+* Book images and data taken from [Open Library](openlibrary.org)
+* 'No book' image taken and modified from [here](https://cdn.pixabay.com/photo/2018/01/17/18/43/book-3088777_1280.png)
+
+
+### Code
+
+* Various code snippets copied from [Bootstrap's site](https://getbootstrap.com/)
+* Four column code for search page and all books page taken from [here](https://startbootstrap.com/snippets/portfolio-four-column/)
+* Code for fixing the footer in place copied from [here](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/)
