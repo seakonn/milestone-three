@@ -2,7 +2,9 @@
 {% block content %}
 
 <div class="container">
-<div id="book-card" class="card mb-3">
+<div class="row">
+    <div class="col-sm-6 offset-sm-3">
+        <div id="book-card" class="card mb-3">
   
   {% set source = "/static/images/no-cover-image.png" %}
   {% if book.image_url %}
@@ -42,6 +44,8 @@
     
   
 
+    </div>
+</div>
 </div>
 
 {% endblock %}
