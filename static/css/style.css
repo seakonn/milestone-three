@@ -157,7 +157,7 @@ body {
     border: 1px solid #a5b452;
 }
 
-#delete-review-button {
+.delete-review-button {
     
     background-color: #5c573e;
     border: 1px solid #ffffff;
@@ -165,7 +165,7 @@ body {
     margin: 0 0.2rem;
 }
 
-#edit-review-button {
+.edit-review-button {
     
     background-color: #a5b452;
     border: 1px solid #5c573e;
