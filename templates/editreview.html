@@ -1,7 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container">
     
-    <a class="back-to-book" href="{{ url_for("book", book_id=book_id)}}">Back to Book Page</a>
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <a class="back-to-book" href="{{ url_for("book", book_id=book_id)}}">Back to Book Page</a>
     
     <h3 class="cafe-noir-text">Editing review for:</h3>
     <h4 class="cafe-noir-text">{{ book_title }}</h4>
@@ -20,6 +22,8 @@
             <button type="submit" class="btn brown-button">Submit</button>
         </div>
     </form>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
