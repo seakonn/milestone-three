@@ -127,6 +127,7 @@ body {
 #review-title {
     
     text-align: left;
+    
 }
 
 #review-title-group {
@@ -134,7 +135,7 @@ body {
     margin-top: 1.5rem;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     
 }
 
@@ -150,6 +151,7 @@ body {
     
     background-color: #5c573e;
     color: #ffffff;
+    
 }
 
 #add-review-button:hover {
