@@ -13,12 +13,9 @@ This is the third project as part of my [Code Institute](https://codeinstitute.n
 These are potential actions that users of the website would want to perform. 
 
 * As a user, I would like to be able to search for a book recommendation.
-* As a user, I would like to upload a review for a book.
-* As a user, I would like to be able to change reviews.
+* As a user, I would like to add a review for a book.
+* As a user, I would like to be able to change a review.
 * As a user, I would like to delete reviews
-* As a user, I would like to add my own books.
-* As a user, I would like to delete books.
-* As the site owner, I would like to make money off links provided in the book reviews
 
 ---
 
@@ -78,14 +75,18 @@ MongoDB's find command is utilised in conjunction with a regular expression to m
 
 ### Book Review Page
 
-### Edit Review Page
+The actual book page gets the requested book and displays its data to the screen. It also displays the review data from the database. There is an "Add Review" button which takes the user to the add review page.
 
-### Add Review Page
+Each review has both an edit review and delete review button. Clicking delete will remove the review from the database and refresh the page. Clicking edit will take the user to the edit review page.
+
+### Edit/Add Review Page
+
+These pages are similar in functionality. Both allow the user to enter a username and user review into a form. When the form is posted, the data is stored in the database and then displayed on the book page, which the user is redirected to.
+
+The difference is that the edit review page loads with the previous database data already entered.
 
 ### Potential Additional Features
 
-
-## Testing
 
 ## Deployment
 
