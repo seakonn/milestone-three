@@ -34,6 +34,28 @@ These are potential actions that users of the website would want to perform.
 
 ![Mobile Search Results](wireframes/search-mobile.jpg "Mobile Search Results")
 
+## Database
+
+Need to be able to store information on books. Since users are adding reviews for books, also need to store that too. Database must use MongoDB.
+
+### Design
+
+Book data to store: Title, Author and Link to a cover image of the book.
+
+Review Data to store: User Name, Review content
+
+Since one book can have many reviews, will store reviews as an embedded document inside the book document.
+
+Book --> Title, Author, Cover Link, Review Data --> User Name, Content
+
+
+### Implementation
+
+Book data selected from sixteen random books on [Open Libary](openlibrary.org). This data was then added to the database using the MongoDB command line.
+
+Review data was left blank and inserted later when the database was linked to the website. 
+
+
 ## Features
 
 ### Index Page
