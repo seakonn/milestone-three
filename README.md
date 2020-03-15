@@ -66,9 +66,15 @@ The main content on the index page is a link to a random book on the site. This 
 
 ### All Books Page
 
+When navigated to, the all books page fetches all of the books in the database, then displays them to the screen using HTML and CSS. Each of the books is a link to the individual book.
 
+The information is displayed in a column on mobile, and expands to multiple columns on bigger screens. This is accomplished with bootstrap's grid system.
 
 ### Search Page
+
+Much like the 'All Books' page, this fetches some of the book data and displays it to the screen. The difference is that it only returns data which matches the search terms entered by the user.
+
+MongoDB's find command is utilised in conjunction with a regular expression to make sure only the searched for data is returned.
 
 ### Book Review Page
 
