@@ -60,7 +60,13 @@ Review data was left blank and inserted later when the database was linked to th
 
 ### Index Page
 
+Index page has a collapsible navbar implemented using bootstrap. Site logo provides a link back to the index page. Navbar also has search box which goes to the search page, and an "All Books" button which goes to the all books page.
+
+The main content on the index page is a link to a random book on the site. This link is generated when the index page is navigated to. It displays the random book cover, title and author; and clicking on it brings you to that book.
+
 ### All Books Page
+
+
 
 ### Search Page
 
