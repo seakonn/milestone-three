@@ -24,16 +24,34 @@ These are potential actions that users of the website would want to perform.
 
 ### Wireframes
 
-![Desktop Homepage](assets/wireframes/home-desktop.jpg "Desktop Homepage")
+![Desktop Homepage](wireframes/home-desktop.jpg "Desktop Homepage")
 
-![Tablet Homepage](assets/wireframes/home-tablet.jpg "Tablet Homepage")
+![Tablet Homepage](wireframes/home-tablet.jpg "Tablet Homepage")
 
-![Mobile Homepage](assets/wireframes/home-mobile.jpg "Mobile Homepage")
+![Mobile Homepage](wireframes/home-mobile.jpg "Mobile Homepage")
 
-![Desktop Search Results](assets/wireframes/search-desktop.jpg "Desktop Search Results")
+![Desktop Search Results](wireframes/search-desktop.jpg "Desktop Search Results")
 
-![Mobile Search Results](assets/wireframes/search-mobile.jpg "Mobile Search Results")
+![Mobile Search Results](wireframes/search-mobile.jpg "Mobile Search Results")
 
+## Features
+
+### Index Page
+
+### All Books Page
+
+### Search Page
+
+### Book Review Page
+
+### Edit Review Page
+
+### Add Review Page
+
+### Potential Additional Features
+
+
+## Testing
 
 ## Deployment
 
