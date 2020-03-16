@@ -87,6 +87,27 @@ The difference is that the edit review page loads with the previous database dat
 
 ### Potential Additional Features
 
+* Could add ability for users/admin to delete books
+* Could get more books from another source
+* Could get more book info for database (page counts, ISBN etc)
+
+## Testing
+
+### User Stories Revisited
+
+* *As a user, I would like to be able to search for a book recommendation.*
+The search box in the nav bar can be used to search for the required books.
+
+* *As a user, I would like to add a review for a book.*
+On the book page, users can click the 'Add Review' button which will allow them to do so.
+
+* *As a user, I would like to be able to change a review.*
+On the book page, the 'Edit Review' button allows users to do this.
+ 
+* *As a user, I would like to delete reviews*
+Inside the review box, there is a 'Delete Review' button which will remove the review from the database
+
+
 
 ## Deployment
 
